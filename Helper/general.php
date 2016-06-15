@@ -1,5 +1,5 @@
 <?php
-namespace Helper;
+namespace shankarbala33\db_explorer\Helper;
 
 /**
  * General - Snippets are used for basic needs of PHP snippets
