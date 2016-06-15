@@ -1,0 +1,19 @@
+{
+  "name": "shankarbala33/snippets",
+  "type": "library",
+  "description": "Collection of PHP Snippets",
+  "keywords": ["Snippets","PHP Snippet","PHP Snippets","Array Function"],
+  "license": "MIT",
+  "authors": [{
+    "name" : "Shankar Thiyagaraajan"
+  }
+  ],
+
+  "require": {
+    "php": "^5.5.9|^7.0"
+  },
+
+  "autoload": {
+    "psr-4": { "shankarbala33\\snippets\\": "src" }
+  }
+}
