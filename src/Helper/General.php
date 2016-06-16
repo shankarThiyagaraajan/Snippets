@@ -95,4 +95,25 @@ class General{
         }
         return $result;
     }
+    
+    /**
+     * Function for extract data parameter data from the URL.
+     * This function is most valuable in "AJAX" calls.
+     * 
+     * @param string $field Field to Extract
+     * @return string extracted data
+     */
+    public static function extractDataFromHTTP($field)
+    {
+        $result = '';
+        $source = $_SERVER['HTTP_REFERER'];
+        $source = explode('?', $source);
+        $source = explode('&', $source[1]);
+        foreach ($source as $key => $value) {
+            if (str_contains($value, $field)) {
+                $result = str_replace($field . '=', '', $value);
+            }
+        }
+        return $result;
+    }
 }
