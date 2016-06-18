@@ -116,4 +116,12 @@ class General{
         }
         return $result;
     }
+    
+    /** 
+     * To Check the given content is Exist in Array or Not
+     */
+     public static function checkExist($source, $data)
+    {
+        return array_search($data, $source);
+    }
 }
