@@ -123,5 +123,18 @@ class General{
      public static function checkExist($source, $data)
     {
         return array_search($data, $source);
+    }    
+    
+    /**
+     * Eliminate all un-necessary contents in string.
+     * @param $string
+     */
+    public static function makeString(&$string)
+    {
+        $string = strtolower($string);
+        $string = str_replace(" | ", "-", $string);
+        $string = str_replace(" ", "-", $string);
+        $string = preg_replace('/[^a-zA-Z0-9\']/', '-', $string);
+        $string = str_replace("'", '', $string);
     }
 }
