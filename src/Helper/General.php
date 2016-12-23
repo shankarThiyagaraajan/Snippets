@@ -137,4 +137,25 @@ class General{
         $string = preg_replace('/[^a-zA-Z0-9\']/', '-', $string);
         $string = str_replace("'", '', $string);
     }
+    
+    /**
+     * To Check Mail with multiple possibilities.
+     *
+     * @param $email
+     * @return bool
+     */
+    public static function checkMail($email)
+    {
+        // Simple Field Validation.
+        if (!$email) return false;
+
+        // Simple String Validation
+        $email = strval($email);
+        if (!$email) return false;
+
+        // Check received data with Email Syntax validation.
+        if (!filter_var($email, FILTER_SANITIZE_EMAIL)) return false;
+
+        return true;
+    }
 }
