@@ -1,4 +1,4 @@
-## Userfull Snippets for Regualar Uses.
+## Useful Snippets for Regualar Uses.
 
 ### Snippets Type:
 
@@ -8,12 +8,12 @@
 
 ### 1.General Snippets:
 
-  Bunch of Array, String and Other Usefull functions for PHP.
+  Bunch of Array, String and Other Useful functions for PHP.
   It will make simple and intractive interface for coding.
   
 ### 2.Download Snippets:
 
- Some of Usefull cURL based functions for make 
+ Some of cURL based functions for make 
     
  - cURL Call(ping), 
  - Form Submission,
