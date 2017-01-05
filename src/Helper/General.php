@@ -203,8 +203,31 @@ class General{
 
 }
 
-public static function getBrowser($user_agent) {
     
+/**
+ * To Unset Array with List of Keys.
+ */
+public static function unsetArray($key, &$array)
+{
+        if (isset($key)) {
+            if (is_array($key)) {
+                foreach ($key as $index) {
+                    if (isset($array[$index])) unset($array[$index]);
+                }
+            } else {
+                unset($array[$key]);
+            }
+        }
+
+        return $array;
+}
+    
+/**
+ * To Get Active Broswer
+ */
+public static function getBrowser() 
+  {    
+    $user_agent = $_SERVER['HTTP_USER_AGENT'];
     $browser        =   "Unknown Browser";
     
     if(!($user_agent = strval($user_agent))) return $browser;
