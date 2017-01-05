@@ -1,4 +1,5 @@
-## Useful Snippets for Regualar Uses.
+## Useful Snippets for Regualar Uses 
+
 
 ### Snippets Type:
 
