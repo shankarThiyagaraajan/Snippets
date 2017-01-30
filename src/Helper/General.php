@@ -6,7 +6,6 @@ namespace shankarbala33\db_explorer\Helper;
  */
 /**
  * Class General
- * @package Helper
  */
 class General{
 
@@ -131,10 +130,15 @@ class General{
      */
     public static function makeString(&$string)
     {
+        // Make string to Lower.
         $string = strtolower($string);
+        // Eliminating "|", by replace "-".
         $string = str_replace(" | ", "-", $string);
+        // Trim space with "-".
         $string = str_replace(" ", "-", $string);
+        // Eliminate chars except AlphaNumeric with "-".
         $string = preg_replace('/[^a-zA-Z0-9\']/', '-', $string);
+        // Remove Single quote.
         $string = str_replace("'", '', $string);
     }
     
